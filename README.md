@@ -15,3 +15,9 @@ A more space-efficient workspace switcher applet for the Budgie Desktop
 ```
 ./install.sh
 ```
+
+## Uninstalling
+* Execute the uninstall script
+```
+./uninstall.sh
+```
