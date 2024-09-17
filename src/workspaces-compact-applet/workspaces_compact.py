@@ -126,13 +126,31 @@ class WorkspacesCompactApplet(Budgie.Applet):
         else:
             logger.error("update_spin_button(): couldn't get the number of workspaces for the popover!")
 
+    def get_japanese_number(self, number):
+        """Return the kanji for a given integer"""
+        kanji_map = {
+            1: '一',
+            2: '二',
+            3: '三',
+            4: '四',
+            5: '五',
+            6: '六',
+            7: '七',
+            8: '八',
+            9: '九',
+            10: '十'
+        }
+        if number in kanji_map.keys():
+            return kanji_map[number]
+
     def update_label(self, ws_count=None):
         """ Update the content of the label """
         ws = self.wn_screen.get_active_workspace()
 
         if ws is not None:
             count = ws_count if ws_count is not None else self.wn_screen.get_workspace_count()
-            text = str(ws.get_number()+1) + "/" + str(count)
+            # text = str(ws.get_number()+1) + "/" + str(count)
+            text = self.get_japanese_number(ws.get_number() + 1)
             self.label.set_label(text)
             self.label.set_tooltip_text(ws.get_name())
         else:
