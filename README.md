@@ -1,7 +1,8 @@
 # Compact Workspace Switcher for Budgie Desktop
-A more space-efficient workspace switcher applet for the Budgie Desktop
+A more space-efficient workspace switcher applet for the Budgie Desktop. 
+This fork replaces the arabic numerals (e.g. 1, 2, 3) with Japanese/Chinese characters (e.g. 一、二、三).
 
-![Screenshot](data/screencap.gif)
+> Demo gif to be added
 
 ## Features
 * Switches workspaces. Yay!
