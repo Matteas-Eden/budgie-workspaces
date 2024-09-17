@@ -141,14 +141,14 @@ class WorkspacesCompactApplet(Budgie.Applet):
     def on_scroll(self, widget, e):
         """ Handle the scroll wheel """
 
-        if e.direction == Gdk.ScrollDirection.UP:
-            # print ("You scrolled up, switch to prev workspace")
+        if e.direction == Gdk.ScrollDirection.DOWN:
+            # print ("You scrolled down, switch to prev workspace")
             prev_ws = self.get_prev_workspace()
             if prev_ws is not None:
                 prev_ws.activate(x11_now())
 
-        elif e.direction == Gdk.ScrollDirection.DOWN:
-            # print ("You scrolled down, switch to next workspace")
+        elif e.direction == Gdk.ScrollDirection.UP:
+            # print ("You scrolled up, switch to next workspace")
             next_ws = self.get_next_workspace()
             if next_ws is not None:
                 next_ws.activate(x11_now())
